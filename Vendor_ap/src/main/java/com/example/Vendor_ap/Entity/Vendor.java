@@ -22,6 +22,7 @@ public class Vendor {
     private String address;
     private String city;
     private String state;
+    @Column(unique = true)
     private String vendorCode;
     @NotNull
     @Size(min = 6, max = 6)
@@ -32,15 +33,7 @@ public class Vendor {
     @Email(message = "Invalid email address")
     private String email;
 
-    public Vendor(String vendorName, String address, String city, String state, String vendorCode, String pinCode, String mobileNumber, String email) {
-        this.vendorName = vendorName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.vendorCode = vendorCode;
-        this.pinCode = pinCode;
-        this.mobileNumber = mobileNumber;
-        this.email = email;
+
     }
-}
+
 
